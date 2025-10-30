@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DigitalNova | Soluciones Web Creativas</title>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans bg-gray-50">
+
+  <!-- Header -->
+  <header class="fixed w-full bg-white shadow-md z-50">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl font-bold text-indigo-600">DigitalNova</h1>
+      <nav>
+        <ul class="flex space-x-4 text-gray-700">
+          <li><a href="#hero" class="hover:text-indigo-600">Inicio</a></li>
+          <li><a href="#servicios" class="hover:text-indigo-600">Servicios</a></li>
+          <li><a href="#contacto" class="hover:text-indigo-600">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="pt-20 flex flex-col md:flex-row items-center justify-center min-h-screen bg-gray-100">
+    <div class="text-center md:text-left md:w-1/2 p-6">
+      <h2 class="text-4xl font-bold mb-4 text-gray-800">Transformamos tu presencia online</h2>
+      <p class="mb-6 text-gray-700 leading-relaxed">Creamos sitios web atractivos, funcionales y optimizados para que tu negocio destaque en el mundo digital.</p>
+      <a href="#contacto" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition duration-300">Contáctanos</a>
+    </div>
+    <div class="md:w-1/2 p-4">
+      <img src="assets/hero.jpg" alt="Diseño web moderno" class="rounded-xl shadow-lg w-full h-auto">
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section id="servicios" class="py-16 bg-white">
+    <div class="container mx-auto text-center px-4">
+      <h3 class="text-3xl font-bold mb-12 text-gray-800">Nuestros Servicios</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 shadow rounded-xl hover:shadow-lg transition duration-300">
+          <h4 class="font-bold text-xl mb-3 text-indigo-600">Diseño UX/UI</h4>
+          <p class="text-gray-600">Creamos experiencias digitales intuitivas y visualmente atractivas para tus usuarios.</p>
+        </div>
+        <div class="p-6 shadow rounded-xl hover:shadow-lg transition duration-300">
+          <h4 class="font-bold text-xl mb-3 text-indigo-600">Desarrollo Frontend</h4>
+          <p class="text-gray-600">Sitios web responsivos, rápidos y modernos con las mejores prácticas de desarrollo.</p>
+        </div>
+        <div class="p-6 shadow rounded-xl hover:shadow-lg transition duration-300">
+          <h4 class="font-bold text-xl mb-3 text-indigo-600">Optimización SEO</h4>
+          <p class="text-gray-600">Hacemos que tu web se posicione mejor en buscadores y atraiga más clientes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="py-16 bg-gray-100">
+    <div class="container mx-auto max-w-lg">
+      <h3 class="text-3xl font-bold mb-6 text-center text-gray-800">Contáctanos</h3>
+      <form id="contactForm" class="bg-white p-6 rounded-xl shadow-md">
+        <div class="mb-4">
+          <label class="block mb-2 font-semibold text-gray-700">Nombre</label>
+          <input type="text" id="nombre" class="w-full border border-gray-300 px-3 py-2 rounded-lg focus:outline-none focus:border-indigo-500" required>
+        </div>
+        <div class="mb-4">
+          <label class="block mb-2 font-semibold text-gray-700">Correo</label>
+          <input type="email" id="correo" class="w-full border border-gray-300 px-3 py-2 rounded-lg focus:outline-none focus:border-indigo-500" required>
+        </div>
+        <div class="mb-4">
+          <label class="block mb-2 font-semibold text-gray-700">Mensaje</label>
+          <textarea id="mensaje" class="w-full border border-gray-300 px-3 py-2 rounded-lg focus:outline-none focus:border-indigo-500" rows="4" required></textarea>
+        </div>
+        <button type="submit" id="enviarBtn" class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition duration-300">Enviar</button>
+      </form>
+      <p id="formMessage" class="text-green-500 mt-4 text-center hidden">¡Tu mensaje ha sido enviado con éxito!</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white shadow-inner py-6 mt-16">
+    <div class="container mx-auto text-center">
+      <p class="text-gray-700">&copy; 2025 DigitalNova. Todos los derechos reservados.</p>
+      <div class="flex justify-center mt-3 space-x-5 text-indigo-600">
+        <a href="#" class="hover:text-indigo-800">LinkedIn</a>
+        <a href="#" class="hover:text-indigo-800">GitHub</a>
+        <a href="#" class="hover:text-indigo-800">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
