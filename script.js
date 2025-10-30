@@ -1,29 +1,32 @@
+// Seleccionamos el formulario y el mensaje
 const form = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
-const enviarBtn = document.getElementById('enviarBtn');
 
 form.addEventListener('submit', function(e) {
-  e.preventDefault();
+    e.preventDefault(); // Evita que se recargue la página
 
-  const nombreInput = document.getElementById('nombre').value.trim();
-  const correoInput = document.getElementById('correo').value.trim();
-  const mensajeInput = document.getElementById('mensaje').value.trim();
+    // Obtenemos valores
+    const nombre = document.getElementById('nombre').value.trim();
+    const correo = document.getElementById('correo').value.trim();
+    const mensaje = document.getElementById('mensaje').value.trim();
 
-  if (nombreInput === '' || correoInput === '' || mensajeInput === '') {
-    alert('Por favor, completa todos los campos.');
-    return;
-  }
+    // Validación simple
+    if(nombre === '' || correo === '' || mensaje === '') {
+        alert('Por favor completa todos los campos.');
+        return;
+    }
 
-  // Simula envío
-  enviarBtn.classList.add('bg-green-500');
-  enviarBtn.textContent = 'Enviado ✅';
-  formMessage.classList.remove('hidden');
+    // Validar formato de correo
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(!emailRegex.test(correo)) {
+        alert('Ingresa un correo válido.');
+        return;
+    }
 
-  form.reset();
+    // Si todo está bien
+    formMessage.classList.remove('hidden');
+    formMessage.textContent = '¡Tu mensaje ha sido enviado con éxito!';
 
-  setTimeout(() => {
-    enviarBtn.classList.remove('bg-green-500');
-    enviarBtn.textContent = 'Enviar';
-    formMessage.classList.add('hidden');
-  }, 3000);
+    // Limpiar formulario
+    form.reset();
 });
